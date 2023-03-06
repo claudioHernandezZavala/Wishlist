@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C3333"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="418dp"
+        android:layout_height="342dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/wishrv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/wishitem" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+
+        android:id="@+id/button"
+        android:layout_width="156dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="96dp"
+        android:background="#0E8388"
+        android:backgroundTintMode="add"
+        android:hapticFeedbackEnabled="false"
+        android:text="Add"
+        android:textColor="#CBE4DE"
+        android:textColorHighlight="#D11818"
+        android:textColorLink="#E80D0D"
+        android:textSize="20sp"
+        app:iconTint="#222831"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#222831" />
+
+    <EditText
+        android:id="@+id/itemname"
+        android:layout_width="89dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="140dp"
+        android:background="#CBE4DE"
+        android:backgroundTint="#CBE4DE"
+        android:ems="10"
+        android:hint="name"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_width="157dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="84dp"
+        android:background="#CBE4DE"
+        android:backgroundTint="#CBE4DE"
+        android:ems="10"
+        android:hint="price"
+        android:inputType="number"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemname" />
+
+    <EditText
+        android:id="@+id/url"
+        android:layout_width="215dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="16dp"
+        android:background="#CBE4DE"
+        android:backgroundTint="#CBE4DE"
+        android:ems="10"
+        android:hint="URL"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/price" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
